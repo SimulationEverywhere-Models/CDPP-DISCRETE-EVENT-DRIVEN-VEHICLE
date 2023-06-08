@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_FVC8gDPrEeKC-YD86wwF7A" modelName="top" defined="true" sourceFileRelativePath="velocitySensor.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_FVC8gTPrEeKC-YD86wwF7A" portName="act_rpm_fb" portType="OUTPUT_PORT" incomingLinks="_FVC8ijPrEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_FVC8gjPrEeKC-YD86wwF7A" portName="act_rpm" outgoingLinks="_FVC8iTPrEeKC-YD86wwF7A"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_FVC8gzPrEeKC-YD86wwF7A" instanceName="velocitySensor_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_FVC8hDPrEeKC-YD86wwF7A" modelName="VelocitySensor" defined="true" sourceFileRelativePath="velocitySensor.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_FVC8hTPrEeKC-YD86wwF7A" portName="act_rpm" incomingLinks="_FVC8iTPrEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_FVC8hjPrEeKC-YD86wwF7A" portName="act_rpm_fb" portType="OUTPUT_PORT" outgoingLinks="_FVC8ijPrEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_FVC8hzPrEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_FVC8iDPrEeKC-YD86wwF7A" name="preparation" value="00:00:05:000"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_FVC8iTPrEeKC-YD86wwF7A" target="_FVC8hTPrEeKC-YD86wwF7A" source="_FVC8gjPrEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_FVC8ijPrEeKC-YD86wwF7A" target="_FVC8gTPrEeKC-YD86wwF7A" source="_FVC8hjPrEeKC-YD86wwF7A"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_FVC8izPrEeKC-YD86wwF7A" type="DEVS" element="_FVC8gDPrEeKC-YD86wwF7A" name="velocitySensor.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_FVC8jDPrEeKC-YD86wwF7A"/>
+  </notation:Diagram>
+</xmi:XMI>

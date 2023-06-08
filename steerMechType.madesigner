@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_EEJ8YDPrEeKC-YD86wwF7A" modelName="top" defined="true" sourceFileRelativePath="steerMechType.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_EEJ8YTPrEeKC-YD86wwF7A" portName="wheel_turn" portType="OUTPUT_PORT" incomingLinks="_EEJ8ajPrEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_EEJ8YjPrEeKC-YD86wwF7A" portName="delta_angle" outgoingLinks="_EEJ8aTPrEeKC-YD86wwF7A"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_EEJ8YzPrEeKC-YD86wwF7A" instanceName="steerMechType_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_EEJ8ZDPrEeKC-YD86wwF7A" modelName="SteerMechType" defined="true" sourceFileRelativePath="steerMechType.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_EEJ8ZTPrEeKC-YD86wwF7A" portName="delta_angle" incomingLinks="_EEJ8aTPrEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_EEJ8ZjPrEeKC-YD86wwF7A" portName="wheel_turn" portType="OUTPUT_PORT" outgoingLinks="_EEJ8ajPrEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_EEJ8ZzPrEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_EEJ8aDPrEeKC-YD86wwF7A" name="preparation" value="00:00:15:000"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_EEJ8aTPrEeKC-YD86wwF7A" target="_EEJ8ZTPrEeKC-YD86wwF7A" source="_EEJ8YjPrEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_EEJ8ajPrEeKC-YD86wwF7A" target="_EEJ8YTPrEeKC-YD86wwF7A" source="_EEJ8ZjPrEeKC-YD86wwF7A"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_EEJ8azPrEeKC-YD86wwF7A" type="DEVS" element="_EEJ8YDPrEeKC-YD86wwF7A" name="steerMechType.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_EEJ8bDPrEeKC-YD86wwF7A"/>
+  </notation:Diagram>
+</xmi:XMI>

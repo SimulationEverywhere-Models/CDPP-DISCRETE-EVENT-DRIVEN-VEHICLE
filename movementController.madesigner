@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_-Kh2kDPqEeKC-YD86wwF7A" modelName="top" defined="true" sourceFileRelativePath="movementController.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_-Kh2kTPqEeKC-YD86wwF7A" portName="br_int" portType="OUTPUT_PORT" incomingLinks="_-Kh2pzPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_-Kh2kjPqEeKC-YD86wwF7A" portName="mot_torq" portType="OUTPUT_PORT" incomingLinks="_-Kh2qDPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_-Kh2kzPqEeKC-YD86wwF7A" portName="disp_info1" portType="OUTPUT_PORT" incomingLinks="_-Kh2qTPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_-Kh2lDPqEeKC-YD86wwF7A" portName="act_rpm_fb" outgoingLinks="_-Kh2ozPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_-Kh2lTPqEeKC-YD86wwF7A" portName="accel" outgoingLinks="_-Kh2pDPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_-Kh2ljPqEeKC-YD86wwF7A" portName="decel" outgoingLinks="_-Kh2pTPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_-Kh2lzPqEeKC-YD86wwF7A" portName="emerg_brk" outgoingLinks="_-Kh2pjPqEeKC-YD86wwF7A"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_-Kh2mDPqEeKC-YD86wwF7A" instanceName="movementController_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_-Kh2mTPqEeKC-YD86wwF7A" modelName="MovementController" defined="true" sourceFileRelativePath="movementController.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_-Kh2mjPqEeKC-YD86wwF7A" portName="accel" incomingLinks="_-Kh2pDPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_-Kh2mzPqEeKC-YD86wwF7A" portName="decel" incomingLinks="_-Kh2pTPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_-Kh2nDPqEeKC-YD86wwF7A" portName="emerg_brk" incomingLinks="_-Kh2pjPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_-Kh2nTPqEeKC-YD86wwF7A" portName="act_rpm_fb" incomingLinks="_-Kh2ozPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_-Kh2njPqEeKC-YD86wwF7A" portName="mot_torq" portType="OUTPUT_PORT" outgoingLinks="_-Kh2qDPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_-Kh2nzPqEeKC-YD86wwF7A" portName="br_int" portType="OUTPUT_PORT" outgoingLinks="_-Kh2pzPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_-Kh2oDPqEeKC-YD86wwF7A" portName="disp_info1" portType="OUTPUT_PORT" outgoingLinks="_-Kh2qTPqEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_-Kh2oTPqEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_-Kh2ojPqEeKC-YD86wwF7A" name="preparation" value="00:00:05:000"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_-Kh2ozPqEeKC-YD86wwF7A" target="_-Kh2nTPqEeKC-YD86wwF7A" source="_-Kh2lDPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_-Kh2pDPqEeKC-YD86wwF7A" target="_-Kh2mjPqEeKC-YD86wwF7A" source="_-Kh2lTPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_-Kh2pTPqEeKC-YD86wwF7A" target="_-Kh2mzPqEeKC-YD86wwF7A" source="_-Kh2ljPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_-Kh2pjPqEeKC-YD86wwF7A" target="_-Kh2nDPqEeKC-YD86wwF7A" source="_-Kh2lzPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_-Kh2pzPqEeKC-YD86wwF7A" target="_-Kh2kTPqEeKC-YD86wwF7A" source="_-Kh2nzPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_-Kh2qDPqEeKC-YD86wwF7A" target="_-Kh2kjPqEeKC-YD86wwF7A" source="_-Kh2njPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_-Kh2qTPqEeKC-YD86wwF7A" target="_-Kh2kzPqEeKC-YD86wwF7A" source="_-Kh2oDPqEeKC-YD86wwF7A"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_-Kh2qjPqEeKC-YD86wwF7A" type="DEVS" element="_-Kh2kDPqEeKC-YD86wwF7A" name="movementController.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_-Kh2qzPqEeKC-YD86wwF7A"/>
+  </notation:Diagram>
+</xmi:XMI>

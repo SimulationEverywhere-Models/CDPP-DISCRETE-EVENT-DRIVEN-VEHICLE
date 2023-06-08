@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_gFJ-cDPqEeKC-YD86wwF7A" modelName="top" defined="true" sourceFileRelativePath="controlUnit.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_gFJ-cTPqEeKC-YD86wwF7A" portName="mot_torq" portType="OUTPUT_PORT" incomingLinks="_gFJ-mTPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_gFJ-cjPqEeKC-YD86wwF7A" portName="br_int" portType="OUTPUT_PORT" incomingLinks="_gFJ-mDPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_gFJ-czPqEeKC-YD86wwF7A" portName="disp_info1" portType="OUTPUT_PORT" incomingLinks="_gFJ-mjPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_gFJ-dDPqEeKC-YD86wwF7A" portName="disp_info2" portType="OUTPUT_PORT" incomingLinks="_gFJ-mzPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_gFJ-dTPqEeKC-YD86wwF7A" portName="delta_angle" portType="OUTPUT_PORT" incomingLinks="_gFJ-nDPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_gFJ-djPqEeKC-YD86wwF7A" portName="accel" outgoingLinks="_gFJ-kjPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_gFJ-dzPqEeKC-YD86wwF7A" portName="decel" outgoingLinks="_gFJ-kzPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_gFJ-eDPqEeKC-YD86wwF7A" portName="emerg_brk" outgoingLinks="_gFJ-lDPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_gFJ-eTPqEeKC-YD86wwF7A" portName="act_rpm_fb" outgoingLinks="_gFJ-kTPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_gFJ-ejPqEeKC-YD86wwF7A" portName="turn_angle" outgoingLinks="_gFJ-ljPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_gFJ-ezPqEeKC-YD86wwF7A" portName="drive_straight" outgoingLinks="_gFJ-lzPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_gFJ-fDPqEeKC-YD86wwF7A" portName="act_ang_fb" outgoingLinks="_gFJ-lTPqEeKC-YD86wwF7A"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_gFJ-fTPqEeKC-YD86wwF7A" instanceName="movementController_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_gFJ-fjPqEeKC-YD86wwF7A" modelName="MovementController" defined="true" sourceFileRelativePath="movementController.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_gFJ-fzPqEeKC-YD86wwF7A" portName="accel" incomingLinks="_gFJ-kjPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_gFJ-gDPqEeKC-YD86wwF7A" portName="decel" incomingLinks="_gFJ-kzPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_gFJ-gTPqEeKC-YD86wwF7A" portName="emerg_brk" incomingLinks="_gFJ-lDPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_gFJ-gjPqEeKC-YD86wwF7A" portName="act_rpm_fb" incomingLinks="_gFJ-kTPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_gFJ-gzPqEeKC-YD86wwF7A" portName="mot_torq" portType="OUTPUT_PORT" outgoingLinks="_gFJ-mTPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_gFJ-hDPqEeKC-YD86wwF7A" portName="br_int" portType="OUTPUT_PORT" outgoingLinks="_gFJ-mDPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_gFJ-hTPqEeKC-YD86wwF7A" portName="disp_info1" portType="OUTPUT_PORT" outgoingLinks="_gFJ-mjPqEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_gFJ-hjPqEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_gFJ-hzPqEeKC-YD86wwF7A" name="preparation" value="00:00:05:000"/>
+    </atomicModels>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_gFJ-iDPqEeKC-YD86wwF7A" instanceName="steeringController_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_gFJ-iTPqEeKC-YD86wwF7A" modelName="SteeringController" defined="true" sourceFileRelativePath="steeringController.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_gFJ-ijPqEeKC-YD86wwF7A" portName="turn_angle" incomingLinks="_gFJ-ljPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_gFJ-izPqEeKC-YD86wwF7A" portName="drive_straight" incomingLinks="_gFJ-lzPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_gFJ-jDPqEeKC-YD86wwF7A" portName="act_ang_fb" incomingLinks="_gFJ-lTPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_gFJ-jTPqEeKC-YD86wwF7A" portName="disp_info2" portType="OUTPUT_PORT" outgoingLinks="_gFJ-mzPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_gFJ-jjPqEeKC-YD86wwF7A" portName="delta_angle" portType="OUTPUT_PORT" outgoingLinks="_gFJ-nDPqEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_gFJ-jzPqEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_gFJ-kDPqEeKC-YD86wwF7A" name="preparation" value="00:00:05:000"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_gFJ-kTPqEeKC-YD86wwF7A" target="_gFJ-gjPqEeKC-YD86wwF7A" source="_gFJ-eTPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_gFJ-kjPqEeKC-YD86wwF7A" target="_gFJ-fzPqEeKC-YD86wwF7A" source="_gFJ-djPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_gFJ-kzPqEeKC-YD86wwF7A" target="_gFJ-gDPqEeKC-YD86wwF7A" source="_gFJ-dzPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_gFJ-lDPqEeKC-YD86wwF7A" target="_gFJ-gTPqEeKC-YD86wwF7A" source="_gFJ-eDPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_gFJ-lTPqEeKC-YD86wwF7A" target="_gFJ-jDPqEeKC-YD86wwF7A" source="_gFJ-fDPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_gFJ-ljPqEeKC-YD86wwF7A" target="_gFJ-ijPqEeKC-YD86wwF7A" source="_gFJ-ejPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_gFJ-lzPqEeKC-YD86wwF7A" target="_gFJ-izPqEeKC-YD86wwF7A" source="_gFJ-ezPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_gFJ-mDPqEeKC-YD86wwF7A" target="_gFJ-cjPqEeKC-YD86wwF7A" source="_gFJ-hDPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_gFJ-mTPqEeKC-YD86wwF7A" target="_gFJ-cTPqEeKC-YD86wwF7A" source="_gFJ-gzPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_gFJ-mjPqEeKC-YD86wwF7A" target="_gFJ-czPqEeKC-YD86wwF7A" source="_gFJ-hTPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_gFJ-mzPqEeKC-YD86wwF7A" target="_gFJ-dDPqEeKC-YD86wwF7A" source="_gFJ-jTPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_gFJ-nDPqEeKC-YD86wwF7A" target="_gFJ-dTPqEeKC-YD86wwF7A" source="_gFJ-jjPqEeKC-YD86wwF7A"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_gFQFEDPqEeKC-YD86wwF7A" type="DEVS" element="_gFJ-cDPqEeKC-YD86wwF7A" name="controlUnit.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_gFQFETPqEeKC-YD86wwF7A"/>
+  </notation:Diagram>
+</xmi:XMI>

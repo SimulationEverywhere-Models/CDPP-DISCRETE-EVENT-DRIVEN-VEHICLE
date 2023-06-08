@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_AzF0QDPrEeKC-YD86wwF7A" modelName="top" defined="true" sourceFileRelativePath="steeringController.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_AzF0QTPrEeKC-YD86wwF7A" portName="delta_angle" portType="OUTPUT_PORT" incomingLinks="_AzF0TzPrEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_AzF0QjPrEeKC-YD86wwF7A" portName="disp_info2" portType="OUTPUT_PORT" incomingLinks="_AzF0UzPrEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_AzF0QzPrEeKC-YD86wwF7A" portName="turn_angle" outgoingLinks="_AzF0UTPrEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_AzF0RDPrEeKC-YD86wwF7A" portName="drive_straight" outgoingLinks="_AzF0UjPrEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_AzF0RTPrEeKC-YD86wwF7A" portName="act_ang_fb" outgoingLinks="_AzF0UDPrEeKC-YD86wwF7A"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_AzF0RjPrEeKC-YD86wwF7A" instanceName="steeringController_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_AzF0RzPrEeKC-YD86wwF7A" modelName="SteeringController" defined="true" sourceFileRelativePath="steeringController.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_AzF0SDPrEeKC-YD86wwF7A" portName="turn_angle" incomingLinks="_AzF0UTPrEeKC-YD86wwF7A"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_AzF0STPrEeKC-YD86wwF7A" portName="drive_straight" incomingLinks="_AzF0UjPrEeKC-YD86wwF7A"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_AzF0SjPrEeKC-YD86wwF7A" portName="act_ang_fb" incomingLinks="_AzF0UDPrEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_AzF0SzPrEeKC-YD86wwF7A" portName="disp_info2" portType="OUTPUT_PORT" outgoingLinks="_AzF0UzPrEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_AzF0TDPrEeKC-YD86wwF7A" portName="delta_angle" portType="OUTPUT_PORT" outgoingLinks="_AzF0TzPrEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_AzF0TTPrEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_AzF0TjPrEeKC-YD86wwF7A" name="preparation" value="00:00:05:000"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_AzF0TzPrEeKC-YD86wwF7A" target="_AzF0QTPrEeKC-YD86wwF7A" source="_AzF0TDPrEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_AzF0UDPrEeKC-YD86wwF7A" target="_AzF0SjPrEeKC-YD86wwF7A" source="_AzF0RTPrEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_AzF0UTPrEeKC-YD86wwF7A" target="_AzF0SDPrEeKC-YD86wwF7A" source="_AzF0QzPrEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_AzF0UjPrEeKC-YD86wwF7A" target="_AzF0STPrEeKC-YD86wwF7A" source="_AzF0RDPrEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_AzF0UzPrEeKC-YD86wwF7A" target="_AzF0QjPrEeKC-YD86wwF7A" source="_AzF0SzPrEeKC-YD86wwF7A"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_AzL64DPrEeKC-YD86wwF7A" type="DEVS" element="_AzF0QDPrEeKC-YD86wwF7A" name="steeringController.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_AzL64TPrEeKC-YD86wwF7A"/>
+  </notation:Diagram>
+</xmi:XMI>

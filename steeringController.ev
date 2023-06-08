@@ -1,0 +1,5 @@
+00:00:10:00 turn_angle 10
+00:00:17:00 act_ang_fb 10
+00:00:30:00 turn_angle 20
+00:00:33:00 drive_straight 90
+00:00:40:00 act_ang_fb 5

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_CF5f8DPrEeKC-YD86wwF7A" modelName="top" defined="true" sourceFileRelativePath="steeringModel.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_CF5f8TPrEeKC-YD86wwF7A" portName="wheel_turn" portType="OUTPUT_PORT" incomingLinks="_CF5gAjPrEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_CF5f8jPrEeKC-YD86wwF7A" portName="act_ang_fb" portType="OUTPUT_PORT" incomingLinks="_CF5gBDPrEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_CF5f8zPrEeKC-YD86wwF7A" portName="delta_angle" outgoingLinks="_CF5gATPrEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_CF5f9DPrEeKC-YD86wwF7A" portName="act_wheel_angle" outgoingLinks="_CF5gAzPrEeKC-YD86wwF7A"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_CF5f9TPrEeKC-YD86wwF7A" instanceName="steeringSensor_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_CF5f9jPrEeKC-YD86wwF7A" modelName="SteeringSensor" defined="true" sourceFileRelativePath="steeringSensor.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_CF5f9zPrEeKC-YD86wwF7A" portName="act_wheel_angle" incomingLinks="_CF5gAzPrEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_CF5f-DPrEeKC-YD86wwF7A" portName="act_ang_fb" portType="OUTPUT_PORT" outgoingLinks="_CF5gBDPrEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_CF5f-TPrEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_CF5f-jPrEeKC-YD86wwF7A" name="preparation" value="00:00:05:000"/>
+    </atomicModels>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_CF5f-zPrEeKC-YD86wwF7A" instanceName="steerMechType_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_CF5f_DPrEeKC-YD86wwF7A" modelName="SteerMechType" defined="true" sourceFileRelativePath="steerMechType.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_CF5f_TPrEeKC-YD86wwF7A" portName="delta_angle" incomingLinks="_CF5gATPrEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_CF5f_jPrEeKC-YD86wwF7A" portName="wheel_turn" portType="OUTPUT_PORT" outgoingLinks="_CF5gAjPrEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_CF5f_zPrEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_CF5gADPrEeKC-YD86wwF7A" name="preparation" value="00:00:15:000"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_CF5gATPrEeKC-YD86wwF7A" target="_CF5f_TPrEeKC-YD86wwF7A" source="_CF5f8zPrEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_CF5gAjPrEeKC-YD86wwF7A" target="_CF5f8TPrEeKC-YD86wwF7A" source="_CF5f_jPrEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_CF5gAzPrEeKC-YD86wwF7A" target="_CF5f9zPrEeKC-YD86wwF7A" source="_CF5f9DPrEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_CF5gBDPrEeKC-YD86wwF7A" target="_CF5f8jPrEeKC-YD86wwF7A" source="_CF5f-DPrEeKC-YD86wwF7A"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_CF5gBTPrEeKC-YD86wwF7A" type="DEVS" element="_CF5f8DPrEeKC-YD86wwF7A" name="steeringModel.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_CF5gBjPrEeKC-YD86wwF7A"/>
+  </notation:Diagram>
+</xmi:XMI>

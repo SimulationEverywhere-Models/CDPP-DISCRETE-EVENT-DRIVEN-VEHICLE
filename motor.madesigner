@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_8t45cDPqEeKC-YD86wwF7A" modelName="top" defined="true" sourceFileRelativePath="motor.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_8t45cTPqEeKC-YD86wwF7A" portName="mot_rpm" portType="OUTPUT_PORT" incomingLinks="_8t45ejPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_8t45cjPqEeKC-YD86wwF7A" portName="mot_torq" outgoingLinks="_8t45eTPqEeKC-YD86wwF7A"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_8t45czPqEeKC-YD86wwF7A" instanceName="motor_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_8t45dDPqEeKC-YD86wwF7A" modelName="Motor" defined="true" sourceFileRelativePath="motor.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_8t45dTPqEeKC-YD86wwF7A" portName="mot_torq" incomingLinks="_8t45eTPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_8t45djPqEeKC-YD86wwF7A" portName="mot_rpm" portType="OUTPUT_PORT" outgoingLinks="_8t45ejPqEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_8t45dzPqEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_8t45eDPqEeKC-YD86wwF7A" name="preparation" value="00:00:15:00"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_8t45eTPqEeKC-YD86wwF7A" target="_8t45dTPqEeKC-YD86wwF7A" source="_8t45cjPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_8t45ejPqEeKC-YD86wwF7A" target="_8t45cTPqEeKC-YD86wwF7A" source="_8t45djPqEeKC-YD86wwF7A"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_8t45ezPqEeKC-YD86wwF7A" type="DEVS" element="_8t45cDPqEeKC-YD86wwF7A" name="motor.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_8t45fDPqEeKC-YD86wwF7A"/>
+  </notation:Diagram>
+</xmi:XMI>

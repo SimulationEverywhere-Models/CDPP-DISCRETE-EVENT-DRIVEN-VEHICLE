@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_C_xuQDPrEeKC-YD86wwF7A" modelName="top" defined="true" sourceFileRelativePath="steeringSensor.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_C_xuQTPrEeKC-YD86wwF7A" portName="act_ang_fb" portType="OUTPUT_PORT" incomingLinks="_C_xuSjPrEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_C_xuQjPrEeKC-YD86wwF7A" portName="act_wheel_angle" outgoingLinks="_C_xuSTPrEeKC-YD86wwF7A"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_C_xuQzPrEeKC-YD86wwF7A" instanceName="steeringSensor_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_C_xuRDPrEeKC-YD86wwF7A" modelName="SteeringSensor" defined="true" sourceFileRelativePath="steeringSensor.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_C_xuRTPrEeKC-YD86wwF7A" portName="act_wheel_angle" incomingLinks="_C_xuSTPrEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_C_xuRjPrEeKC-YD86wwF7A" portName="act_ang_fb" portType="OUTPUT_PORT" outgoingLinks="_C_xuSjPrEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_C_xuRzPrEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_C_xuSDPrEeKC-YD86wwF7A" name="preparation" value="00:00:05:000"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_C_xuSTPrEeKC-YD86wwF7A" target="_C_xuRTPrEeKC-YD86wwF7A" source="_C_xuQjPrEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_C_xuSjPrEeKC-YD86wwF7A" target="_C_xuQTPrEeKC-YD86wwF7A" source="_C_xuRjPrEeKC-YD86wwF7A"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_C_304DPrEeKC-YD86wwF7A" type="DEVS" element="_C_xuQDPrEeKC-YD86wwF7A" name="steeringSensor.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_C_304TPrEeKC-YD86wwF7A"/>
+  </notation:Diagram>
+</xmi:XMI>

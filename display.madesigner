@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_43lWQDPqEeKC-YD86wwF7A" modelName="top" defined="true" sourceFileRelativePath="display.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_43lWQTPqEeKC-YD86wwF7A" portName="display_in1" outgoingLinks="_43lWSjPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_43lWQjPqEeKC-YD86wwF7A" portName="display_in2" outgoingLinks="_43lWSTPqEeKC-YD86wwF7A"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_43lWQzPqEeKC-YD86wwF7A" instanceName="display_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_43lWRDPqEeKC-YD86wwF7A" modelName="Display" defined="true" sourceFileRelativePath="display.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_43lWRTPqEeKC-YD86wwF7A" portName="display_in1" incomingLinks="_43lWSjPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_43lWRjPqEeKC-YD86wwF7A" portName="display_in2" incomingLinks="_43lWSTPqEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_43lWRzPqEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_43lWSDPqEeKC-YD86wwF7A" name="preparation" value="00:00:05:000"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_43lWSTPqEeKC-YD86wwF7A" target="_43lWRjPqEeKC-YD86wwF7A" source="_43lWQjPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_43lWSjPqEeKC-YD86wwF7A" target="_43lWRTPqEeKC-YD86wwF7A" source="_43lWQTPqEeKC-YD86wwF7A"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_43lWSzPqEeKC-YD86wwF7A" type="DEVS" element="_43lWQDPqEeKC-YD86wwF7A" name="display.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_43lWTDPqEeKC-YD86wwF7A"/>
+  </notation:Diagram>
+</xmi:XMI>

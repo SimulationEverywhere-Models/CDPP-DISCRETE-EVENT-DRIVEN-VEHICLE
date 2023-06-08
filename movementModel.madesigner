@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="__v88QDPqEeKC-YD86wwF7A" modelName="top" defined="true" sourceFileRelativePath="movementModel.ma">
+    <ports xmi:type="CoupledPort" xmi:id="__v88QTPqEeKC-YD86wwF7A" portName="mot_rpm" portType="OUTPUT_PORT" incomingLinks="__v88WjPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="__v88QjPqEeKC-YD86wwF7A" portName="act_rpm_fb" portType="OUTPUT_PORT" incomingLinks="__v88WzPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="__v88QzPqEeKC-YD86wwF7A" portName="mot_torq" outgoingLinks="__v88VzPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="__v88RDPqEeKC-YD86wwF7A" portName="br_int" outgoingLinks="__v88WDPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="__v88RTPqEeKC-YD86wwF7A" portName="act_rpm" outgoingLinks="__v88WTPqEeKC-YD86wwF7A"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="__v88RjPqEeKC-YD86wwF7A" instanceName="motor_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="__v88RzPqEeKC-YD86wwF7A" modelName="Motor" defined="true" sourceFileRelativePath="motor.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="__v88SDPqEeKC-YD86wwF7A" portName="mot_torq" incomingLinks="__v88VzPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="__v88STPqEeKC-YD86wwF7A" portName="mot_rpm" portType="OUTPUT_PORT" outgoingLinks="__v88WjPqEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="__v88SjPqEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="__v88SzPqEeKC-YD86wwF7A" name="preparation" value="00:00:15:000"/>
+    </atomicModels>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="__v88TDPqEeKC-YD86wwF7A" instanceName="brakes_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="__v88TTPqEeKC-YD86wwF7A" modelName="Brakes" defined="true" sourceFileRelativePath="brakes.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="__v88TjPqEeKC-YD86wwF7A" portName="br_int" incomingLinks="__v88WDPqEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="__v88TzPqEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="__v88UDPqEeKC-YD86wwF7A" name="preparation" value="00:00:15:000"/>
+    </atomicModels>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="__v88UTPqEeKC-YD86wwF7A" instanceName="velocitySensor_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="__v88UjPqEeKC-YD86wwF7A" modelName="VelocitySensor" defined="true" sourceFileRelativePath="velocitySensor.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="__v88UzPqEeKC-YD86wwF7A" portName="act_rpm" incomingLinks="__v88WTPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="__v88VDPqEeKC-YD86wwF7A" portName="act_rpm_fb" portType="OUTPUT_PORT" outgoingLinks="__v88WzPqEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="__v88VTPqEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="__v88VjPqEeKC-YD86wwF7A" name="preparation" value="00:00:05:000"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="__v88VzPqEeKC-YD86wwF7A" target="__v88SDPqEeKC-YD86wwF7A" source="__v88QzPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="__v88WDPqEeKC-YD86wwF7A" target="__v88TjPqEeKC-YD86wwF7A" source="__v88RDPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="__v88WTPqEeKC-YD86wwF7A" target="__v88UzPqEeKC-YD86wwF7A" source="__v88RTPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="__v88WjPqEeKC-YD86wwF7A" target="__v88QTPqEeKC-YD86wwF7A" source="__v88STPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="__v88WzPqEeKC-YD86wwF7A" target="__v88QjPqEeKC-YD86wwF7A" source="__v88VDPqEeKC-YD86wwF7A"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="__wDC4DPqEeKC-YD86wwF7A" type="DEVS" element="__v88QDPqEeKC-YD86wwF7A" name="movementModel.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="__wDC4TPqEeKC-YD86wwF7A"/>
+  </notation:Diagram>
+</xmi:XMI>

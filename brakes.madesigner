@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_YKBT4DPqEeKC-YD86wwF7A" modelName="top" defined="true" sourceFileRelativePath="brakes.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_YKBT4TPqEeKC-YD86wwF7A" portName="br_int" outgoingLinks="_YKBT5zPqEeKC-YD86wwF7A"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_YKBT4jPqEeKC-YD86wwF7A" instanceName="brakes_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_YKBT4zPqEeKC-YD86wwF7A" modelName="Brakes" defined="true" sourceFileRelativePath="brakes.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_YKBT5DPqEeKC-YD86wwF7A" portName="br_int" incomingLinks="_YKBT5zPqEeKC-YD86wwF7A"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_YKBT5TPqEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_YKBT5jPqEeKC-YD86wwF7A" name="preparation" value="00:00:15:00"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_YKBT5zPqEeKC-YD86wwF7A" target="_YKBT5DPqEeKC-YD86wwF7A" source="_YKBT4TPqEeKC-YD86wwF7A"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_YKHagDPqEeKC-YD86wwF7A" type="DEVS" element="_YKBT4DPqEeKC-YD86wwF7A" name="brakes.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_YKHagTPqEeKC-YD86wwF7A"/>
+  </notation:Diagram>
+</xmi:XMI>

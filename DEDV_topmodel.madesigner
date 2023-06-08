@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_3TNZcDPqEeKC-YD86wwF7A" modelName="top" defined="true" sourceFileRelativePath="DEDV_topmodel.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_3TNZcTPqEeKC-YD86wwF7A" portName="mot_rpm" portType="OUTPUT_PORT" incomingLinks="_3TNZ5DPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_3TNZcjPqEeKC-YD86wwF7A" portName="wheel_turn" portType="OUTPUT_PORT" incomingLinks="_3TNZ5TPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_3TNZczPqEeKC-YD86wwF7A" portName="accel" outgoingLinks="_3TNZ3TPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_3TNZdDPqEeKC-YD86wwF7A" portName="decel" outgoingLinks="_3TNZ3jPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_3TNZdTPqEeKC-YD86wwF7A" portName="emerg_brk" outgoingLinks="_3TNZ3zPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_3TNZdjPqEeKC-YD86wwF7A" portName="turn_angle" outgoingLinks="_3TNZ4DPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_3TNZdzPqEeKC-YD86wwF7A" portName="drive_straight" outgoingLinks="_3TNZ4TPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_3TNZeDPqEeKC-YD86wwF7A" portName="act_wheel_angle" outgoingLinks="_3TNZ4jPqEeKC-YD86wwF7A"/>
+    <ports xmi:type="CoupledPort" xmi:id="_3TNZeTPqEeKC-YD86wwF7A" portName="act_rpm" outgoingLinks="_3TNZ4zPqEeKC-YD86wwF7A"/>
+    <coupledModels xmi:type="CoupledModelInstance" xmi:id="_3TNZejPqEeKC-YD86wwF7A" instanceName="controlUnit_c">
+      <modelType xmi:type="CoupledModelType" xmi:id="_3TNZezPqEeKC-YD86wwF7A" modelName="controlUnit_c">
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZfDPqEeKC-YD86wwF7A" portName="mot_torq" portType="OUTPUT_PORT" incomingLinks="_3TNZojPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZfTPqEeKC-YD86wwF7A" portName="br_int" portType="OUTPUT_PORT" incomingLinks="_3TNZozPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZfjPqEeKC-YD86wwF7A" portName="delta_angle" portType="OUTPUT_PORT" incomingLinks="_3TNZoTPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZfzPqEeKC-YD86wwF7A" portName="accel" incomingLinks="_3TNZ3TPqEeKC-YD86wwF7A" outgoingLinks="_3TNZmjPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZgDPqEeKC-YD86wwF7A" portName="decel" incomingLinks="_3TNZ3jPqEeKC-YD86wwF7A" outgoingLinks="_3TNZmzPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZgTPqEeKC-YD86wwF7A" portName="emerg_brk" incomingLinks="_3TNZ3zPqEeKC-YD86wwF7A" outgoingLinks="_3TNZnDPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZgjPqEeKC-YD86wwF7A" portName="turn_angle" incomingLinks="_3TNZ4DPqEeKC-YD86wwF7A" outgoingLinks="_3TNZnjPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZgzPqEeKC-YD86wwF7A" portName="drive_straight" incomingLinks="_3TNZ4TPqEeKC-YD86wwF7A" outgoingLinks="_3TNZnzPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZhDPqEeKC-YD86wwF7A" portName="act_rpm_fb" outgoingLinks="_3TNZnTPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZhTPqEeKC-YD86wwF7A" portName="act_ang_fb" outgoingLinks="_3TNZoDPqEeKC-YD86wwF7A"/>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_3TNZhjPqEeKC-YD86wwF7A" instanceName="movementController_a">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_3TNZhzPqEeKC-YD86wwF7A" modelName="MovementController" defined="true" sourceFileRelativePath="movementController.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_3TNZiDPqEeKC-YD86wwF7A" portName="accel" incomingLinks="_3TNZmjPqEeKC-YD86wwF7A"/>
+            <ports xmi:type="InputAtomicPort" xmi:id="_3TNZiTPqEeKC-YD86wwF7A" portName="decel" incomingLinks="_3TNZmzPqEeKC-YD86wwF7A"/>
+            <ports xmi:type="InputAtomicPort" xmi:id="_3TNZijPqEeKC-YD86wwF7A" portName="emerg_brk" incomingLinks="_3TNZnDPqEeKC-YD86wwF7A"/>
+            <ports xmi:type="InputAtomicPort" xmi:id="_3TNZizPqEeKC-YD86wwF7A" portName="act_rpm_fb" incomingLinks="_3TNZnTPqEeKC-YD86wwF7A"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_3TNZjDPqEeKC-YD86wwF7A" portName="mot_torq" portType="OUTPUT_PORT" outgoingLinks="_3TNZojPqEeKC-YD86wwF7A"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_3TNZjTPqEeKC-YD86wwF7A" portName="br_int" portType="OUTPUT_PORT" outgoingLinks="_3TNZozPqEeKC-YD86wwF7A"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_3TNZjjPqEeKC-YD86wwF7A" portName="disp_info1" portType="OUTPUT_PORT"/>
+            <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_3TNZjzPqEeKC-YD86wwF7A" name="preparation"/>
+          </modelType>
+          <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_3TNZkDPqEeKC-YD86wwF7A" name="preparation" value="00:00:05:00"/>
+        </atomicModels>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_3TNZkTPqEeKC-YD86wwF7A" instanceName="steeringController_a">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_3TNZkjPqEeKC-YD86wwF7A" modelName="SteeringController" defined="true" sourceFileRelativePath="steeringController.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_3TNZkzPqEeKC-YD86wwF7A" portName="turn_angle" incomingLinks="_3TNZnjPqEeKC-YD86wwF7A"/>
+            <ports xmi:type="InputAtomicPort" xmi:id="_3TNZlDPqEeKC-YD86wwF7A" portName="drive_straight" incomingLinks="_3TNZnzPqEeKC-YD86wwF7A"/>
+            <ports xmi:type="InputAtomicPort" xmi:id="_3TNZlTPqEeKC-YD86wwF7A" portName="act_ang_fb" incomingLinks="_3TNZoDPqEeKC-YD86wwF7A"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_3TNZljPqEeKC-YD86wwF7A" portName="disp_info2" portType="OUTPUT_PORT"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_3TNZlzPqEeKC-YD86wwF7A" portName="delta_angle" portType="OUTPUT_PORT" outgoingLinks="_3TNZoTPqEeKC-YD86wwF7A"/>
+            <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_3TNZmDPqEeKC-YD86wwF7A" name="preparation"/>
+          </modelType>
+          <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_3TNZmTPqEeKC-YD86wwF7A" name="preparation" value="00:00:05:00"/>
+        </atomicModels>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZmjPqEeKC-YD86wwF7A" target="_3TNZiDPqEeKC-YD86wwF7A" source="_3TNZfzPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZmzPqEeKC-YD86wwF7A" target="_3TNZiTPqEeKC-YD86wwF7A" source="_3TNZgDPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZnDPqEeKC-YD86wwF7A" target="_3TNZijPqEeKC-YD86wwF7A" source="_3TNZgTPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZnTPqEeKC-YD86wwF7A" target="_3TNZizPqEeKC-YD86wwF7A" source="_3TNZhDPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZnjPqEeKC-YD86wwF7A" target="_3TNZkzPqEeKC-YD86wwF7A" source="_3TNZgjPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZnzPqEeKC-YD86wwF7A" target="_3TNZlDPqEeKC-YD86wwF7A" source="_3TNZgzPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZoDPqEeKC-YD86wwF7A" target="_3TNZlTPqEeKC-YD86wwF7A" source="_3TNZhTPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZoTPqEeKC-YD86wwF7A" target="_3TNZfjPqEeKC-YD86wwF7A" source="_3TNZlzPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZojPqEeKC-YD86wwF7A" target="_3TNZfDPqEeKC-YD86wwF7A" source="_3TNZjDPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZozPqEeKC-YD86wwF7A" target="_3TNZfTPqEeKC-YD86wwF7A" source="_3TNZjTPqEeKC-YD86wwF7A"/>
+      </modelType>
+    </coupledModels>
+    <coupledModels xmi:type="CoupledModelInstance" xmi:id="_3TNZpDPqEeKC-YD86wwF7A" instanceName="movementModel_c">
+      <modelType xmi:type="CoupledModelType" xmi:id="_3TNZpTPqEeKC-YD86wwF7A" modelName="movementModel_c">
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZpjPqEeKC-YD86wwF7A" portName="mot_rpm" portType="OUTPUT_PORT" incomingLinks="_3TNZvzPqEeKC-YD86wwF7A" outgoingLinks="_3TNZ5DPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZpzPqEeKC-YD86wwF7A" portName="act_rpm_fb" portType="OUTPUT_PORT" incomingLinks="_3TNZwDPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZqDPqEeKC-YD86wwF7A" portName="act_rpm" incomingLinks="_3TNZ4zPqEeKC-YD86wwF7A" outgoingLinks="_3TNZvjPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZqTPqEeKC-YD86wwF7A" portName="mot_torq" outgoingLinks="_3TNZvDPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZqjPqEeKC-YD86wwF7A" portName="br_int" outgoingLinks="_3TNZvTPqEeKC-YD86wwF7A"/>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_3TNZqzPqEeKC-YD86wwF7A" instanceName="motor_a">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_3TNZrDPqEeKC-YD86wwF7A" modelName="Motor" defined="true" sourceFileRelativePath="motor.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_3TNZrTPqEeKC-YD86wwF7A" portName="mot_torq" incomingLinks="_3TNZvDPqEeKC-YD86wwF7A"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_3TNZrjPqEeKC-YD86wwF7A" portName="mot_rpm" portType="OUTPUT_PORT" outgoingLinks="_3TNZvzPqEeKC-YD86wwF7A"/>
+            <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_3TNZrzPqEeKC-YD86wwF7A" name="preparation"/>
+          </modelType>
+          <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_3TNZsDPqEeKC-YD86wwF7A" name="preparation" value="00:00:15:00"/>
+        </atomicModels>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_3TNZsTPqEeKC-YD86wwF7A" instanceName="brakes_a">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_3TNZsjPqEeKC-YD86wwF7A" modelName="Brakes" defined="true" sourceFileRelativePath="brakes.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_3TNZszPqEeKC-YD86wwF7A" portName="br_int" incomingLinks="_3TNZvTPqEeKC-YD86wwF7A"/>
+            <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_3TNZtDPqEeKC-YD86wwF7A" name="preparation"/>
+          </modelType>
+          <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_3TNZtTPqEeKC-YD86wwF7A" name="preparation" value="00:00:15:00"/>
+        </atomicModels>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_3TNZtjPqEeKC-YD86wwF7A" instanceName="velocitySensor_a">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_3TNZtzPqEeKC-YD86wwF7A" modelName="VelocitySensor" defined="true" sourceFileRelativePath="velocitySensor.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_3TNZuDPqEeKC-YD86wwF7A" portName="act_rpm" incomingLinks="_3TNZvjPqEeKC-YD86wwF7A"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_3TNZuTPqEeKC-YD86wwF7A" portName="act_rpm_fb" portType="OUTPUT_PORT" outgoingLinks="_3TNZwDPqEeKC-YD86wwF7A"/>
+            <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_3TNZujPqEeKC-YD86wwF7A" name="preparation"/>
+          </modelType>
+          <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_3TNZuzPqEeKC-YD86wwF7A" name="preparation" value="00:00:05:00"/>
+        </atomicModels>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZvDPqEeKC-YD86wwF7A" target="_3TNZrTPqEeKC-YD86wwF7A" source="_3TNZqTPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZvTPqEeKC-YD86wwF7A" target="_3TNZszPqEeKC-YD86wwF7A" source="_3TNZqjPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZvjPqEeKC-YD86wwF7A" target="_3TNZuDPqEeKC-YD86wwF7A" source="_3TNZqDPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZvzPqEeKC-YD86wwF7A" target="_3TNZpjPqEeKC-YD86wwF7A" source="_3TNZrjPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZwDPqEeKC-YD86wwF7A" target="_3TNZpzPqEeKC-YD86wwF7A" source="_3TNZuTPqEeKC-YD86wwF7A"/>
+      </modelType>
+    </coupledModels>
+    <coupledModels xmi:type="CoupledModelInstance" xmi:id="_3TNZwTPqEeKC-YD86wwF7A" instanceName="steeringModel_c">
+      <modelType xmi:type="CoupledModelType" xmi:id="_3TNZwjPqEeKC-YD86wwF7A" modelName="steeringModel_c">
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZwzPqEeKC-YD86wwF7A" portName="act_ang_fb" portType="OUTPUT_PORT" incomingLinks="_3TNZ1TPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZxDPqEeKC-YD86wwF7A" portName="wheel_turn" portType="OUTPUT_PORT" incomingLinks="_3TNZ1jPqEeKC-YD86wwF7A" outgoingLinks="_3TNZ5TPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZxTPqEeKC-YD86wwF7A" portName="delta_angle" outgoingLinks="_3TNZ0zPqEeKC-YD86wwF7A"/>
+        <ports xmi:type="CoupledPort" xmi:id="_3TNZxjPqEeKC-YD86wwF7A" portName="act_wheel_angle" incomingLinks="_3TNZ4jPqEeKC-YD86wwF7A" outgoingLinks="_3TNZ1DPqEeKC-YD86wwF7A"/>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_3TNZxzPqEeKC-YD86wwF7A" instanceName="steerMechType_a">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_3TNZyDPqEeKC-YD86wwF7A" modelName="SteerMechType" defined="true" sourceFileRelativePath="steerMechType.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_3TNZyTPqEeKC-YD86wwF7A" portName="delta_angle" incomingLinks="_3TNZ0zPqEeKC-YD86wwF7A"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_3TNZyjPqEeKC-YD86wwF7A" portName="wheel_turn" portType="OUTPUT_PORT" outgoingLinks="_3TNZ1jPqEeKC-YD86wwF7A"/>
+            <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_3TNZyzPqEeKC-YD86wwF7A" name="preparation"/>
+          </modelType>
+          <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_3TNZzDPqEeKC-YD86wwF7A" name="preparation" value="00:00:15:00"/>
+        </atomicModels>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_3TNZzTPqEeKC-YD86wwF7A" instanceName="steeringSensor_a">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_3TNZzjPqEeKC-YD86wwF7A" modelName="SteeringSensor" defined="true" sourceFileRelativePath="steeringSensor.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_3TNZzzPqEeKC-YD86wwF7A" portName="act_wheel_angle" incomingLinks="_3TNZ1DPqEeKC-YD86wwF7A"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_3TNZ0DPqEeKC-YD86wwF7A" portName="act_ang_fb" portType="OUTPUT_PORT" outgoingLinks="_3TNZ1TPqEeKC-YD86wwF7A"/>
+            <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_3TNZ0TPqEeKC-YD86wwF7A" name="preparation"/>
+          </modelType>
+          <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_3TNZ0jPqEeKC-YD86wwF7A" name="preparation" value="00:00:05:00"/>
+        </atomicModels>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZ0zPqEeKC-YD86wwF7A" target="_3TNZyTPqEeKC-YD86wwF7A" source="_3TNZxTPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZ1DPqEeKC-YD86wwF7A" target="_3TNZzzPqEeKC-YD86wwF7A" source="_3TNZxjPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZ1TPqEeKC-YD86wwF7A" target="_3TNZwzPqEeKC-YD86wwF7A" source="_3TNZ0DPqEeKC-YD86wwF7A"/>
+        <links xmi:type="CoupledLink" xmi:id="_3TNZ1jPqEeKC-YD86wwF7A" target="_3TNZxDPqEeKC-YD86wwF7A" source="_3TNZyjPqEeKC-YD86wwF7A"/>
+      </modelType>
+    </coupledModels>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_3TNZ1zPqEeKC-YD86wwF7A" instanceName="display_a">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_3TNZ2DPqEeKC-YD86wwF7A" modelName="Display" defined="true" sourceFileRelativePath="display.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_3TNZ2TPqEeKC-YD86wwF7A" portName="display_in1"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_3TNZ2jPqEeKC-YD86wwF7A" portName="display_in2"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_3TNZ2zPqEeKC-YD86wwF7A" name="preparation"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_3TNZ3DPqEeKC-YD86wwF7A" name="preparation" value="00:00:05:00"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_3TNZ3TPqEeKC-YD86wwF7A" target="_3TNZfzPqEeKC-YD86wwF7A" source="_3TNZczPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_3TNZ3jPqEeKC-YD86wwF7A" target="_3TNZgDPqEeKC-YD86wwF7A" source="_3TNZdDPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_3TNZ3zPqEeKC-YD86wwF7A" target="_3TNZgTPqEeKC-YD86wwF7A" source="_3TNZdTPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_3TNZ4DPqEeKC-YD86wwF7A" target="_3TNZgjPqEeKC-YD86wwF7A" source="_3TNZdjPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_3TNZ4TPqEeKC-YD86wwF7A" target="_3TNZgzPqEeKC-YD86wwF7A" source="_3TNZdzPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_3TNZ4jPqEeKC-YD86wwF7A" target="_3TNZxjPqEeKC-YD86wwF7A" source="_3TNZeDPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_3TNZ4zPqEeKC-YD86wwF7A" target="_3TNZqDPqEeKC-YD86wwF7A" source="_3TNZeTPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_3TNZ5DPqEeKC-YD86wwF7A" target="_3TNZcTPqEeKC-YD86wwF7A" source="_3TNZpjPqEeKC-YD86wwF7A"/>
+    <links xmi:type="CoupledLink" xmi:id="_3TNZ5TPqEeKC-YD86wwF7A" target="_3TNZcjPqEeKC-YD86wwF7A" source="_3TNZxDPqEeKC-YD86wwF7A"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_3TTgEDPqEeKC-YD86wwF7A" type="DEVS" element="_3TNZcDPqEeKC-YD86wwF7A" name="DEDV_topmodel.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_3TTgETPqEeKC-YD86wwF7A"/>
+  </notation:Diagram>
+</xmi:XMI>
